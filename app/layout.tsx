@@ -1,6 +1,7 @@
 import type React from "react"
 import { MusicBaseSidebar } from "@/components/music-base-sidebar"
 import { ThemeProvider } from "@/components/theme-provider"
+import { OnboardingProvider } from "@/components/onboarding/onboarding-provider"
 import { Toaster } from "@/components/ui/toaster"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -23,8 +24,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <MusicBaseSidebar>{children}</MusicBaseSidebar>
-          <Toaster />
+          <OnboardingProvider>
+            <MusicBaseSidebar>{children}</MusicBaseSidebar>
+            <Toaster />
+          </OnboardingProvider>
         </ThemeProvider>
       </body>
     </html>

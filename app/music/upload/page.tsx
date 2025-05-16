@@ -117,10 +117,11 @@ export default function UploadMusic() {
                                 <SelectItem value="ep">EP</SelectItem>
                                 <SelectItem value="album">Album</SelectItem>
                               </SelectContent>
-                              <FormDescription>Select the type of release you're uploading</FormDescription>
-                              <FormMessage />
-                            </FormItem>
-                          )}
+                            </Select>
+                            <FormDescription>Select the type of release you're uploading</FormDescription>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
 
                       <FormField
